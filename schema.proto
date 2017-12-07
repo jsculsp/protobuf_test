@@ -1,0 +1,34 @@
+syntax = "proto3";
+// package 为命名空间
+package user_message;
+
+message user {
+    string name = 1;
+    int32 age = 2;
+    enum DataList {
+        WEB = 0;
+        IMAGE = 1;
+        LOCAL = 2;
+    }
+    bool grender = 3;
+    DataList list = 4;
+    Skill skills = 5;
+    message Skill {
+        // 数组类型
+        string favorite = 1;
+        repeated string hobby = 2;
+    }
+
+    oneof myFakeName {
+        string nickName = 7;
+        string petName = 8;
+    }
+
+    message friend {
+        string name = 1;
+        int32 age = 2;
+    }
+
+    repeated friend myFriend = 9;
+    map<string, int32> foo = 10;
+}

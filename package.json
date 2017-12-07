@@ -1,0 +1,7 @@
+{
+  "name": "protobuf_test",
+  "version": "0.0.1",
+  "dependencies": {
+    "protobufjs": "latest"
+  }
+}
