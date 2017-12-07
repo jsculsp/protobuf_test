@@ -7,6 +7,7 @@ let data = {
   name: 'Owen',
   age: 21,
   skills: {
+    favorite: 'coding',
     hobby: ['listen music', 'ride']
   },
 
@@ -54,6 +55,7 @@ if (errMsg) {
 }
 
 // 将数据编码为二进制
+console.log(um.create(data))
 let buf = um.encode(um.create(data)).finish();
 
 socket.on('error', err => {
