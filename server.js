@@ -14,7 +14,7 @@ let data = {
   myFakeName: 'nickName',
   nickName: 'bilibiliou',
 
-  myFirend: [{
+  myFriend: [{
     name: '风清扬',
     age: 45
   }, {
@@ -45,7 +45,7 @@ let socket = dgram.createSocket({
 let serverSchema = protobuf.loadSync('schema.proto');
 
 // 从protobuf 中抽取实例
-let um = serverSchema.lookupType('user_message.user');
+let um = serverSchema.lookupType('user_message.User');
 
 // verify 为检测，根据schema检测数据是否有错误
 let errMsg = um.verify(data);

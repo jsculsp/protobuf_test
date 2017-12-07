@@ -8,7 +8,7 @@ let socket = dgram.createSocket({
 
 // 和服务端逻辑相同
 let clientSchema = protobuf.loadSync('schema.proto');
-let um = clientSchema.lookupType('user_message.user');
+let um = clientSchema.lookupType('user_message.User');
 
 socket.on('message', (buf, rinfo) => {
   console.log('>>>>>>>>', buf);
